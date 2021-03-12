@@ -23,7 +23,7 @@ class Home extends BaseController
     }
 	public function actualizar()
     {
-        return view('FormActualizarE');
+        return view('FormActualizar');
     }
 	// Funciones
 	public function insertarEstudiantes()
