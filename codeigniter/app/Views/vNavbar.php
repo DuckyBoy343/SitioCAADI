@@ -12,13 +12,13 @@
                 <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Aceso</a>
+                <a class="nav-link" href="../Home/Acceso">Acceso</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Registro</a>
+                <a class="nav-link" href="../Home/registro">Registro</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Actualizar</a>
+                <a class="nav-link" href="../Home/actualizar">Actualizar</a>
             </li>
             <!-- <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
