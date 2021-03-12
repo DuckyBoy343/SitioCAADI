@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Controllers;
+use App\Models\mEstudiantes;
 
 class Home extends BaseController
 {
@@ -24,4 +25,19 @@ class Home extends BaseController
     {
         return view('FormActualizarE');
     }
+	// Funciones
+	public function insertarEstudiantes()
+	{
+		$mEstudiantes = new mEstudiantes();
+		$nEstudiante = [
+			"NoControl" => $_POST['control'],
+			"Nombre" => $_POST['nombre'],
+			"Apellidos" => $_POST['apellidos'],
+			"Grado" => $_POST['grado'],
+			"Grupo" => $_POST['grupo'],
+			"Carrera" => $_POST['carrera']
+		];
+		$mEstudiantes->insert($nEstudiante);
+		return view("vInserted");
+	}
 }
