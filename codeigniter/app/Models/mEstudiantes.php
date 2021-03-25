@@ -1,6 +1,6 @@
 <?php
-    namespace App\Models;
-    use CodeIgniter\Model;
+namespace App\Models;
+use CodeIgniter\Model;
 class mEstudiantes extends Model{
     protected $table = 'estudiantes';
     protected $primaryKey = 'NoControl';
@@ -18,5 +18,13 @@ class mEstudiantes extends Model{
     protected $validationRules = [];
     protected $validationMessages = [];
     protected $skipValidation = false;
+
+    public function getAllE()
+    {
+        $db = \Config\Database::connect();
+        $query = $db->query("SELECT * FROM estudiantes");
+        $result = $query->getResult();
+        return $result;
+    }
 }
 ?>
