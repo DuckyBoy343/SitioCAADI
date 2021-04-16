@@ -14,7 +14,7 @@
             <h1>Actualización de datos del sistema</h1>
             <h5>Actualiza los datos que sean necesarios</h5>
             <hr>
-            <form>
+            <form method="POST" action="../Home/actualizarRegistro">
                 Numero de control: <input type="text" name="control"><br><br>
                 <h6>Datos generales</h6>
                 Nombre del Alumno: <input type="text" name="nombre">
