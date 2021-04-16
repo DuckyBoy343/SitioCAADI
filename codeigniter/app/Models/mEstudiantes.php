@@ -6,7 +6,7 @@ class mEstudiantes extends Model{
     protected $primaryKey = 'NoControl';
 
     protected $returnType = 'array';
-    protected $useSoftDeletes = false;
+    protected $useSoftDeletes = true;
 
     protected $allowedFields = ['NoControl','Nombre','Apellidos','Grado','Grupo','Carrera'];
 
@@ -19,5 +19,12 @@ class mEstudiantes extends Model{
     protected $validationMessages = [];
     protected $skipValidation = false;
 
+    public function getAllE()
+    {
+        $db = \Config\Database::connect();
+        $query = $db->query("SELECT * FROM estudiantes");
+        $result = $query->getResult();
+        return $result;
+    }
 }
 ?>

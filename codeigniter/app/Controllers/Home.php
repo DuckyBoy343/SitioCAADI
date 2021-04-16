@@ -55,30 +55,23 @@ class Home extends BaseController
 	public function buscarRegistro()
 	{
 		$mEstudiantes = new mEstudiantes();
-		$NoControl = $_POST['control'];
+		$NoControl = $_POST['NoControl'];
 		$estudiante = $mEstudiantes->find($NoControl);
-		return view("vEstudianteEncontrado",$estudiante);
+		return view("vEstudianteEncontrado", $estudiante);
 	}
 	public function actualizarRegistro()
 	{
 		$mEstudiantes = new mEstudiantes();
-		$NoControl = $_POST['control'];
+		$NoControl = $_POST['NoControl'];
 		$estudianteactualizado = [
 			"Nombre" => $_POST['nombre'],
-			"Apellidos" => $_POST['apellido'],
+			"Apellidos" => $_POST['apellidos'],
 			"Grado" => $_POST['grado'],
 			"Grupo" => $_POST['grupo'],
 			"Carrera" => $_POST['carrera']
 		];
 		$mEstudiantes->update($NoControl, $estudianteactualizado);
 		$usuario = $mEstudiantes->find($NoControl);
-		return $this->mostrarEstudiante();
-	}
-	public function eliminarEstudiantes($id)
-	{
-		$mEstudiantes = new mEstudiantes();
-		$id_Usuario = $id;
-		$mEstudiantes->delete($id_Usuario);
 		return $this->mostrarEstudiante();
 	}
 }
